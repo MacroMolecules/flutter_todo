@@ -15,10 +15,21 @@ class _HomePageState extends State<HomePage> {
         title: Text(
           '待办事项',
           style: TextStyle(
-            fontSize: 20.0,
+            fontSize: 25.0,
             color: Colors.white,
-            ),
+          ),
         ),
+        // 首页顶部侧栏
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.dehaze),
+              onPressed: () {},
+            );
+          },
+        ),
+        // 去除首页顶栏下的阴影
+        elevation: 0.0,
       ),
       body: TodoList(),
     );
